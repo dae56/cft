@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "сае"
+version = "0.1.0"
+description = ""
+authors = ["Alexey_Yamushev/dae56 <Privet.02@mail.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.111.0"
+alembic = "^1.13.1"
+pydantic-settings = "^2.2.1"
+pydantic = "^2.7.1"
+uvicorn = "^0.29.0"
+fastapi-users = {extras = ["sqlalchemy"], version = "^13.0.0"}
+asyncpg = "^0.29.0"
+pytest-asyncio = "^0.23.6"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  ".", "src",
+]
+asyncio_mode="auto"
